@@ -1,0 +1,283 @@
+:root {
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-400: hsl(232, 10%, 56%);
+	--clr-neutral-500: hsla(234, 25%, 52%, 0.2);
+	--clr-neutral-600: hsl(234, 25%, 52%);
+	--clr-neutral-800: hsl(233, 54%, 16%);
+
+	--clr-primary-300: hsl(341, 100%, 83%);
+	--clr-primary-400: hsl(341, 92%, 62%);
+
+	--gradient-01: linear-gradient(
+		0deg,
+		hsl(322, 87%, 55%) 0%,
+		hsl(13, 100%, 64%) 100%
+	);
+	--gradient-02: linear-gradient(
+		180deg,
+		hsl(237, 100%, 64%) 0%,
+		hsl(322, 87%, 55%) 100%
+	);
+
+	--fs-400: 1rem;
+	--fs-500: 1.125rem;
+	--fs-550: 1.25rem;
+	--fs-600: 1.5rem;
+	--fs-700: 2rem;
+	--fs-800: 2.5rem;
+	--fs-900: 3.5rem;
+
+	--fw-400: 500;
+	--fw-700: 700;
+	--fw-900: 800;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* General Styles */
+
+body {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-size: var(--fs-400);
+	font-weight: var(--fw-400);
+	line-height: 1.75;
+	color: var(--clr-neutral-400);
+	background: linear-gradient(
+		180deg,
+		var(--clr-neutral-100) 0%,
+		var(--clr-neutral-500) 100%
+	);
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.25;
+}
+
+h1 {
+	color: var(--clr-neutral-800);
+	font-size: var(--fs-800);
+	text-wrap: balance;
+}
+
+h2 {
+	color: var(--clr-neutral-100);
+	font-size: var(--fs-600);
+}
+
+h3 {
+	color: var(--clr-neutral-800);
+	font-size: var(--fs-550);
+	font-weight: var(--fw-900);
+}
+
+header {
+	margin-top: 1rem;
+}
+
+@media (min-width: 40em) {
+	h1 {
+		font-size: var(--fs-900);
+	}
+
+	h2 {
+		font-size: var(--fs-700);
+	}
+
+	h3 {
+		font-size: var(--fs-600);
+	}
+}
+
+/* Composition */
+
+.flex-row {
+	display: flex;
+	gap: var(--gap, 1rem);
+	justify-content: space-between;
+	align-items: center;
+}
+
+a,
+.link {
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--clr-primary-400);
+	font-weight: var(--fw-700);
+	font-size: var(--fs-400);
+	white-space: nowrap;
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+	opacity: 0.7;
+}
+
+a.btn {
+	color: var(--clr-neutral-100);
+	padding: 0.5rem 1.5rem;
+	border-radius: 100vw;
+}
+
+a.btn[data-type='btn-header'] {
+	background-color: var(--clr-neutral-800);
+}
+
+a.btn[data-type='btn-main'] {
+	background: var(--gradient-01);
+	padding: 1rem 2rem;
+}
+
+a.btn[data-type='btn-footer'] {
+	background: var(--gradient-02);
+}
+
+@media (min-width: 20em) {
+	a,
+	.link {
+		font-size: var(--fs-500);
+	}
+}
+
+/* Utility */
+
+.flow > :where(:not(:first-child)) {
+	margin-top: var(--flow-spacer, 2em);
+}
+
+.wrapper {
+	max-width: 65rem;
+	margin-inline: auto;
+	padding: 1rem;
+}
+
+.grid-flow {
+	display: grid;
+	gap: var(--flow-spacer, 0.8em);
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+.bg-neutral-800 {
+	background-color: var(--clr-neutral-800);
+}
+
+@media (min-width: 35em) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
+	}
+}
+
+@media (min-width: 55em) {
+	.grid[data-type='3-column'] {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Block */
+
+.cards {
+	display: grid;
+	gap: 2.5rem;
+}
+
+.card {
+	background-color: var(--clr-neutral-100);
+	border-radius: 10px;
+	padding: 3.5rem 1rem 2rem 2rem;
+	position: relative;
+}
+
+.card-img {
+	position: absolute;
+	top: -1.5rem;
+	left: 2rem;
+}
+
+.card[data-type='accent'] {
+	background: var(--gradient-01);
+	padding: 1.5rem 2rem;
+}
+
+/* Exception */
