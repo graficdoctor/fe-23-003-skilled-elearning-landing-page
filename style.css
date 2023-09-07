@@ -120,6 +120,7 @@ body {
 		var(--clr-neutral-100) 0%,
 		var(--clr-neutral-500) 100%
 	);
+  overflow: hidden;
 }
 
 h1,

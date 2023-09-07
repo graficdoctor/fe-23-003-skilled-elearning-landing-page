@@ -27,7 +27,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot-desktop.jpg)
-![](./screenshot-mobile.jpg)
 
 ### Links
 
@@ -47,11 +46,11 @@ Users should be able to:
 
 As for the naming of my selectors in CSS, I took inspiration from [Cube CSS](https://cube.fyi/). It's the first time I was writing following these rules as it is closer to how I generally write my CSS.
 
-I'm struggling implementing the `<picture>`-element.
+I'm struggling placing the images outside the page-flow. I fiddled with grid, but it seems there's some blank space on these images that bother me while placing them. Which leads me to believe there's a different solution. But I'm lost.
 
 ### Continued development
 
-How to properly use the `<picture>`element.
+How to place images outside the page-flow.
 
 ### Useful resources
 
