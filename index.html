@@ -23,25 +23,32 @@
 	<body class="flow">
 		<header class="wrapper flex-row">
 			<img src="/assets/logo-dark.svg" class="logo" alt="" />
-			<a href="#" class="btn" data-type="btn-header">Get Started</a>
+			<button type="button" class="btn" data-type="btn-header">
+				Get Started
+			</button>
 		</header>
 		<main class="flow">
-			<section class="wrapper grid">
-				<div class="flow">
+			<section class="top-section wrapper grid">
+				<div class="top-section__text flow">
 					<h1>Maximize skill, minimize budget</h1>
 					<p>
 						Our modern courses across a range of in-demand skills will give you
 						the knowledge you need to live the life you want.
 					</p>
-					<p><a href="#" class="btn" data-type="btn-main">Get Started</a></p>
+					<p>
+						<button type="button" class="btn" data-type="btn-main">
+							Get Started
+						</button>
+					</p>
 				</div>
-				<picture class="flex-center">
+				<picture class="">
 					<source
 						srcset="
-							assets/image-hero-mobile.png,
-							assets/image-hero-mobile@2x.png 2x
+							assets/image-hero-desktop.png,
+							assets/image-hero-desktop@2x.png 2x
 						"
 						type="image/png"
+						media="(min-width: 55em)"
 					/>
 					<source
 						srcset="
@@ -53,15 +60,14 @@
 					/>
 					<source
 						srcset="
-							assets/image-hero-desktop.png,
-							assets/image-hero-desktop@2x.png 2x
+							assets/image-hero-mobile.png,
+							assets/image-hero-mobile@2x.png 2x
 						"
 						type="image/png"
-						media="(min-width: 55em)"
 					/>
 					<img
-						src="assets/image-hero-desktop.webp"
-						type="image/webp"
+						src="assets/image-hero-mobile.png"
+						type="image/png"
 						alt="Woman drinking a coffee with 2 banners on top mentioning 'Course Hours 1.451' and 'Members 29k'"
 					/>
 				</picture>
@@ -77,7 +83,7 @@
 						Learn the latest animation techniques to create stunning motion
 						design and captivate your audience.
 					</p>
-					<a href="#" class="link">Get Started</a>
+					<button type="button" data-type="link">Get Started</button>
 				</div>
 				<div class="card grid-flow">
 					<img src="/assets/icon-design.svg" class="card-img" alt="" />
@@ -86,7 +92,7 @@
 						Create beautiful, usable interfaces to help shape the future of how
 						the web looks.
 					</p>
-					<a href="#" class="link">Get Started</a>
+					<button type="button" data-type="link">Get Started</button>
 				</div>
 				<div class="card grid-flow">
 					<img src="/assets/icon-photography.svg" class="card-img" alt="" />
@@ -95,7 +101,7 @@
 						Explore critical fundamentals like lighting, composition, and focus
 						to capture exceptional photos.
 					</p>
-					<a href="#" class="link">Get Started</a>
+					<button type="button" data-type="link">Get Started</button>
 				</div>
 				<div class="card grid-flow">
 					<img src="/assets/icon-crypto.svg" class="card-img" alt="" />
@@ -104,7 +110,7 @@
 						All you need to know to get started investing in crypto. Go from
 						beginner to advanced with this 54 hour course.
 					</p>
-					<a href="#" class="link">Get Started</a>
+					<button type="button" data-type="link">Get Started</button>
 				</div>
 				<div class="card grid-flow">
 					<img src="/assets/icon-business.svg" class="card-img" alt="" />
@@ -113,14 +119,16 @@
 						A step-by-step playbook to help you start, scale, and sustain your
 						business without outside investment.
 					</p>
-					<a href="#" class="link">Get Started</a>
+					<button data-type="link">Get Started</button>
 				</div>
 			</section>
 		</main>
 		<footer class="bg-neutral-800">
 			<div class="wrapper flex-row">
 				<img src="/assets/logo-light.svg" class="logo" alt="" />
-				<a href="#" class="btn" data-type="btn-footer">Get Started</a>
+				<button type="button" class="btn" data-type="btn-footer">
+					Get Started
+				</button>
 			</div>
 		</footer>
 	</body>
